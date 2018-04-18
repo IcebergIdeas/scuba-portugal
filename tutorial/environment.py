@@ -11,7 +11,7 @@ def before_all(context):
     else:
         context.browser = webdriver.Chrome()
 
-    context.port = 80
+    context.port = 5000
     if "PORT" in os.environ:
         context.port = os.environ.get("PORT")
 
@@ -20,3 +20,4 @@ def before_all(context):
 
 def after_all(context):
     context.browser.close()
+
